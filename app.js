@@ -1,24 +1,25 @@
 'use strict';
 
-var express = require('express'),
-    exphbs  = require('express3-handlebars');
+var express    = require('express'),
+    exphbs     = require('express3-handlebars'),
+    handlebars = require('handlebars'),
+    https      = require('https'),
+    moment     = require('moment-timezone'),
+    path       = require('path');
 
-var config = require('./config');
+var config     = require('./config'),
+    eventbrite = require('./lib/eventbrite'),
+    helpers    = require('./lib/helpers');
 
 var app = module.exports = express();
 
 // -- Configure App ------------------------------------------------------------
 
-app.set('views', config.dirs.views);
 app.set('view engine', '.hbs');
-app.enable('strict routing');
-app.enable('case sensitive routing');
-
 app.engine('.hbs', exphbs({
-    defaultLayout: 'main',
-    extname      : '.hbs',
-    layoutsDir   : config.dirs.layouts,
-    partialsDir  : config.dirs.partials
+    extname   : '.hbs',
+    handlebars: handlebars,
+    helpers   : helpers
 }));
 
 // -- Middleware ---------------------------------------------------------------
@@ -30,7 +31,7 @@ if (config.isDevelopment) {
 app.use(express.compress());
 // favicon
 app.use(app.router);
-app.use(express.static(config.dirs.pub));
+app.use(express.static(path.resolve('public')));
 // nofound
 
 if (config.isDevelopment) {
@@ -42,8 +43,17 @@ if (config.isDevelopment) {
 
 // -- Routes -------------------------------------------------------------------
 
-app.get('/', function (req, res) {
-    res.render('home');
+app.get('/', function (req, res, next) {
+    eventbrite.getEvent().then(function (event) {
+        res.locals.event = {
+            name : event.name.text,
+            url  : event.url,
+            start: moment.tz(event.start.local, event.start.timezone),
+            end  : moment.tz(event.end.local, event.end.timezone)
+        };
+
+        res.render('home');
+    }, next);
 });
 
 // -- Locals -------------------------------------------------------------------
