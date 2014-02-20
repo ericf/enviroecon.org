@@ -1,0 +1,14 @@
+{
+  "name": "enviroecon",
+  "version": "0.0.0",
+  "private": true,
+  "description": "enviroecon.com ==============",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Eric Ferraiuolo <eferraiuolo@gmail.com>",
+  "dependencies": {
+    "express": "~3.4.8"
+  }
+}
