@@ -1,11 +1,10 @@
 'use strict';
 
-var express = require('express');
+var http = require('http');
 
-var app = express();
+var config = require('./config'),
+    app    = require('./app');
 
-app.get('/', function (req, res) {
-    res.send('enviroecon.org, it works!');
+http.createServer(app).listen(config.port, function () {
+    console.log('EnviroEcon Server listening on ' + config.port);
 });
-
-app.listen(process.env.PORT || 5000);
