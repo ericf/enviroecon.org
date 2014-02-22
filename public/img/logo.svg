@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="475" height="600" viewBox="0, 0, 950, 1200">
+  <g id="Leaf">
+    <path d="M876.093,35.67 C1089.202,785.29 449.202,1293.29 205.202,942.29 C-223.798,792.29 242.202,74.29 876.093,35.67" fill="#8EA644"/>
+    <path d="M864.858,59.435 L658.525,652.102 L501.192,464.102 L437.192,652.102 L358.525,577.435 L205.192,945.769" fill-opacity="0" stroke="#375C17" stroke-width="75" stroke-linecap="round"/>
+    <path d="M876.593,36.17 C1089.702,785.79 376.956,1313.602 212.535,931.967 C-257.311,788.63 242.702,74.79 876.593,36.17" fill-opacity="0" stroke="#5B8C17" stroke-width="50" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M190.333,889 C197.824,888.465 255.715,923.041 250.667,934.333 C234.054,971.496 203.399,1042.477 201.343,1183.751 C201,1207.333 54.51,1176.899 69.01,1150.418 C150,1002.5 184.843,893.879 186.667,892.667" fill="#355C17"/>
+  </g>
+  <defs/>
+</svg>

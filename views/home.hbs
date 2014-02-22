@@ -2,15 +2,31 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>{{title}}</title>
 
-    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.4.2/pure-min.css">
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/{{pure}}/pure-min.css">
+    <link rel="stylesheet" href="/app.css">
+
+    <script src="http://use.typekit.net/{{typekit}}.js"></script>
+    <script>
+        try { Typekit.load(); } catch (e) {}
+    </script>
 </head>
 <body>
 
-    <h1>{{event.name}}</h1>
-    <p>{{eventDay event.start}}</p>
-    <p>{{eventTime event.start event.end}}</p>
+    <div class="brand">
+        <b class="brand-mark"></b>
+        <h1 class="brand-name">
+            <span class="brand-name-part">Economic Growth</span>
+            <span class="brand-name-sep">&amp;</span>
+            <span class="brand-name-part">Environmental Constraints</span>
+        </h1>
+    </div>
+
+    {{!-- <p>{{eventDay event.start}}</p>
+    <p>{{eventTime event.start event.end}}</p> --}}
 
 </body>
 </html>
