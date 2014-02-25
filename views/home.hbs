@@ -16,13 +16,30 @@
 </head>
 <body>
 
-    <div class="brand">
-        <b class="brand-mark"></b>
-        <h1 class="brand-name">
+    <div class="brand l-wrap">
+        <b class="brand-name">
             <span class="brand-name-part">Economic Growth</span>
             <span class="brand-name-sep">&amp;</span>
             <span class="brand-name-part">Environmental Constraints</span>
+        </b>
+
+        <img class="brand-mark" src="/img/logo.svg">
+    </div>
+
+    <div class="l-wrap">
+        <h1 class="event-title">
+            <span class="event-title-part">Investing in a</span>
+            <span class="event-title-part">Sustainable Future</span>
         </h1>
+
+        <h2 class="event-spacetime">
+            <span class="event-location">Cambridge</span> &bull;
+            <span class="event-time">{{eventDay event.start}}</span>
+        </h2>
+
+        <p class="event-cta">
+            <a class="event-attend pure-button" href="{{event.url}}">Attend</a>
+        </p>
     </div>
 
     {{!-- <p>{{eventDay event.start}}</p>
