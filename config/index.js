@@ -11,12 +11,12 @@ module.exports = {
     port: env.PORT || 5000,
 
     eventbrite: {
+        token   : env.EVENTBRITE_OAUTH_TOKEN,
         hostname: 'www.eventbriteapi.com',
         version : 'v3',
-        token   : 'Z6JFNQHVKSLB37RU4DML',
         eventId : '6156778089'
     },
 
     pure   : '0.4.2',
-    typekit: 'uin1ziu'
+    typekit: env.TYPEKIT
 };
