@@ -59,7 +59,8 @@ app.get('/', function (req, res, next) {
 // -- Locals -------------------------------------------------------------------
 
 app.locals({
-    title: 'Economic Growth & Environmental Constraints',
+    title: 'Investing in a Sustainable Future',
+    brand: 'Economic Growth & Environmental Constraints',
 
     pure   : config.pure,
     typekit: config.typekit
