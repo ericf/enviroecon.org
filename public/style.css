@@ -1,3 +1,10 @@
+/*
+bright: #c3d392
+light : #8ea644
+medium: #5b8c17
+dark  : #375c17
+*/
+
 * {
     -webkit-box-sizing: border-box;
        -moz-box-sizing: border-box;
@@ -9,6 +16,11 @@
     -webkit-box-sizing: border-box;
        -moz-box-sizing: border-box;
             box-sizing: border-box;
+}
+
+html, button, input, select, textarea,
+.pure-g [class *= "pure-u"] {
+    font-family: "proxima-nova", sans-serif;
 }
 
 .pure-button-hover,
@@ -23,23 +35,30 @@
 
 body {
     min-width: 320px;
-    line-height: 1.6;
+    line-height: 1.5;
+}
+
+h2, h3, h4 {
+    font-weight: 400;
 }
 
 .l-wrap {
-    margin-left: 0.5em;
-    margin-right: 0.5em;
+    max-width: 46rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
 }
 
 .brand {
-    margin-top: 0.5em;
+    margin-top: 0.5rem;
     text-align: center;
 }
 .brand-name {
-    font-size: 1.25em;
+    font-size: 1.25rem;
     font-family: "adelle-sans", sans-serif;
     font-weight: 300;
-    line-height: 1.2;
+    line-height: 1.25;
     color: #375c17;
 }
 .brand-name-part {
@@ -51,90 +70,119 @@ body {
 .brand-mark {
     display: block;
     width: 120px;
-    margin: 1.5em auto;
+    margin: 1.5rem auto;
 }
 
+.event {
+    padding: 1rem 0;
+    color: #fff;
+    background: #5b8c17;
+}
 .event-title,
 .event-spacetime {
     font-family: "adelle-sans", sans-serif;
     font-weight: 300;
-    line-height: 1.2;
+    line-height: 1.25;
     text-align: center;
-    color: #375c17;
+}
+.event-title {
+    margin-top: 0;
 }
 .event-title-part {
     white-space: nowrap;
 }
 .event-spacetime {
-    font-size: 1.375em;
+    font-size: 1.375rem;
     text-transform: uppercase;
+    margin-bottom: 0;
+}
+.event-spacetime-sep {
+    display: inline-block;
+    margin: 0 0.25rem;
+}
+.event-time {
+    font-size: 1.125rem;
+    font-family: "proxima-nova", sans-serif;
+    margin-top: 0.25rem;
+    color: #c3d392;
 }
 .event-cta {
+    margin: 2rem 0;
     text-align: center;
 }
 .event-attend {
-    font-size: 1.25em;
-    padding-left: 2em;
-    padding-right: 2em;
+    font-size: 1.25rem;
+    padding-left: 2.5em;
+    padding-right: 2.5em;
     color: #fff;
-    background-color: #5b8c17;
+    background-color: #375c17;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+.event-desc {
+    font-size: 1.125rem;
 }
 
 @media screen and (min-width: 30em) {
     .l-wrap {
-        margin-left: 1em;
-        margin-right: 1em;
+        padding-left: 1rem;
+        padding-right: 1rem;
     }
 
     .event-spacetime {
-        font-size: 1.5em;
+        font-size: 1.5rem;
     }
 }
 
 @media screen and (min-width: 37.5em) {
     body {
-        margin-top: 1em;
-        margin-bottom: 1em;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
     }
 
     .brand-mark {
         display: block;
-        width: 150px;
-        margin: 2em auto;
+        width: 140px;
+        margin: 2rem auto;
     }
 }
 
 @media screen and (min-width: 48em) {
     body {
-        margin-top: 2em;
-        margin-bottom: 2em;
-    }
-
-    .l-wrap {
-        margin-left: 2em;
-        margin-right: 2em;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
     }
 
     .brand-name {
-        font-size: 1.5em;
+        font-size: 1.5rem;
     }
     .brand-mark {
         display: block;
-        width: 150px;
-        margin: 4em auto;
+        width: 160px;
+        margin: 4rem auto;
     }
 
     .event-title {
-        font-size: 2.5em;
+        font-size: 2.5rem;
+        margin-top: 0.5rem;
     }
     .event-spacetime {
-        font-size: 1.75em;
+        font-size: 1.75rem;
+    }
+    .event-spacetime-sep {
+        margin: 0 0.5rem;
+    }
+    .event-time {
+        font-size: 1.375rem;
     }
     .event-cta {
-        margin-top: 2em;
-        margin-bottom: 2em;
+        margin: 2.5rem 0;
     }
     .event-attend {
-        font-size: 1.5em;
+        font-size: 1.5rem;
+    }
+    .event-desc {
+        font-size: 1.25rem;
     }
 }

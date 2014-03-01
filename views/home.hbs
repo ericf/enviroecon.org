@@ -27,24 +27,42 @@
         <img class="brand-mark" src="/img/logo.svg">
     </div>
 
-    <div class="l-wrap">
-        <h1 class="event-title">
-            <span class="event-title-part">Investing in a</span>
-            <span class="event-title-part">Sustainable Future</span>
-        </h1>
+    <div class="event">
+        <div class="l-wrap">
+            <h1 class="event-title">
+                <span class="event-title-part">Investing in a</span>
+                <span class="event-title-part">Sustainable Future</span>
+            </h1>
 
-        <h2 class="event-spacetime">
-            <span class="event-location">Cambridge</span> &bull;
-            <span class="event-time">{{eventDay event.start}}</span>
-        </h2>
+            <h2 class="event-spacetime">
+                <span class="event-location">Cambridge</span>
+                <span class="event-spacetime-sep">&bull;</span>
+                <span class="event-day">
+                    {{eventDay event.start}}
 
-        <p class="event-cta">
-            <a class="event-attend pure-button" href="{{event.url}}">Attend</a>
-        </p>
+                    <p class="event-time">
+                        {{eventTime event.start event.end}}
+                    </p>
+                </span>
+            </h2>
+
+            <p class="event-cta">
+                <a class="event-attend pure-button" href="{{event.url}}">Attend</a>
+            </p>
+        </div>
     </div>
 
-    {{!-- <p>{{eventDay event.start}}</p>
-    <p>{{eventTime event.start event.end}}</p> --}}
+    <div class="l-wrap">
+        <h2>About the Conference</h2>
+
+        <p class="event-desc">
+            The goal of this conference is to stimulate thinking and discussion about the relationship between economic activity and environmental impacts. We will address the overarching question of how to move from our current macro-economic model &mdash; based on perpetual growth &mdash; and its associated environmental impacts, toward a more appropriately scaled and sustainable economy.
+        </p>
+
+        <h2>Speakers</h2>
+        <h2>Venue: {{event.venue.name.text}}</h2>
+        <h2>Sponsors</h2>
+    </div>
 
 </body>
 </html>

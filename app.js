@@ -49,7 +49,8 @@ app.get('/', function (req, res, next) {
             name : event.name.text,
             url  : event.url,
             start: moment.tz(event.start.local, event.start.timezone),
-            end  : moment.tz(event.end.local, event.end.timezone)
+            end  : moment.tz(event.end.local, event.end.timezone),
+            venue: event.venue
         };
 
         res.render('home');
