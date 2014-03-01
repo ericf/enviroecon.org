@@ -17,6 +17,10 @@ module.exports = {
         eventId : '6156778089'
     },
 
+    mapbox: {
+        version: 'v1.6.1'
+    },
+
     pure   : '0.4.2',
     typekit: env.TYPEKIT
 };

@@ -63,6 +63,7 @@ app.locals({
     title: 'Investing in a Sustainable Future',
     brand: 'Economic Growth & Environmental Constraints',
 
+    mapbox : config.mapbox.version,
     pure   : config.pure,
     typekit: config.typekit
 });

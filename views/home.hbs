@@ -9,6 +9,7 @@
 
     <link rel="stylesheet" href="http://yui.yahooapis.com/pure/{{pure}}/pure-min.css">
     <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="//api.tiles.mapbox.com/mapbox.js/{{mapbox}}/mapbox.css">
 
     <script src="http://use.typekit.net/{{typekit}}.js"></script>
     <script>
@@ -56,13 +57,35 @@
         <h2>About the Conference</h2>
 
         <p class="event-desc">
-            The goal of this conference is to stimulate thinking and discussion about the relationship between economic activity and environmental impacts. We will address the overarching question of how to move from our current macro-economic model &mdash; based on perpetual growth &mdash; and its associated environmental impacts, toward a more appropriately scaled and sustainable economy.
+            The goal of this conference is to stimulate thinking and discussion about the relationship between economic activity and environmental impacts. A particular focus will be on investment: Can socially motivated investments lead to changes in the overall quality and direction of economic activity? How can investments help reduce resource extraction and consumption, promoting a sustainable future?
         </p>
 
-        <h2>Speakers</h2>
-        <h2>Sponsors</h2>
-        <h2>Venue: {{event.venue.name.text}}</h2>
+        {{!-- <h2>Speakers</h2>
+        <h2>Sponsors</h2> --}}
     </div>
+
+    <div class="venue">
+        <div class="venue-info">
+          {{#with event.venue}}
+            <h2 class="venue-title">
+                <span class="venue-label">Venue:</span>
+                <span class="venue-name">{{name.text}}</span>
+            </h2>
+
+            <p class="venue-address">
+                <a href="http://maps.apple.com/?q={{address_1}}+{{city}}+{{postal_code}}">
+                    {{address_1}}<br>
+                    {{city}}, MA {{postal_code}}
+                </a>
+            </p>
+          {{/with}}
+        </div>
+
+        <div id="map"></div>
+    </div>
+
+    <script src="//api.tiles.mapbox.com/mapbox.js/{{mapbox}}/mapbox.js"></script>
+    <script src="/app.js"></script>
 
 </body>
 </html>

@@ -34,6 +34,11 @@ html, button, input, select, textarea,
     box-shadow: none;
 }
 
+html,
+body {
+    height: 100%;
+}
+
 body {
     min-width: 320px;
     line-height: 1.5;
@@ -43,6 +48,11 @@ body {
 h1, h2, h3, h4 {
     font-weight: 600;
     color: #375c17;
+}
+
+a:link,
+a:visited {
+    color: #5b8c17;
 }
 
 .l-wrap {
@@ -116,14 +126,47 @@ h1, h2, h3, h4 {
     font-size: 1.25rem;
     padding-left: 2.5em;
     padding-right: 2.5em;
-    color: #fff;
     background-color: #375c17;
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
     border-radius: 4px;
 }
+.event-attend:link,
+.event-attend:visited {
+    color: #fff;
+}
 .event-desc {
     font-size: 1.125rem;
+}
+
+.venue {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.venue-info {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    background: #c3d392;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+}
+.venue-info a:link,
+.venue-info a:visited, {
+    text-decoration: none;
+}
+.venue-title {
+    font-size: 1.125rem;
+}
+.venue-name {
+    color: #18290a;
+    white-space: nowrap;
+}
+#map {
+    height: 100%;
 }
 
 @media screen and (min-width: 30em) {
@@ -135,12 +178,16 @@ h1, h2, h3, h4 {
     .event-spacetime {
         font-size: 1.5rem;
     }
+
+    .venue-info {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
 }
 
 @media screen and (min-width: 37.5em) {
     body {
         margin-top: 1rem;
-        margin-bottom: 1rem;
     }
 
     .brand-mark {
@@ -153,7 +200,6 @@ h1, h2, h3, h4 {
 @media screen and (min-width: 48em) {
     body {
         margin-top: 2rem;
-        margin-bottom: 2rem;
     }
 
     .brand-name {
@@ -186,5 +232,15 @@ h1, h2, h3, h4 {
     }
     .event-desc {
         font-size: 1.25rem;
+    }
+
+    .venue-info {
+        width: auto;
+    }
+}
+
+@media screen and (min-height: 40em) {
+    .venue {
+        height: 50%
     }
 }
