@@ -47,9 +47,7 @@
                 </span>
             </h2>
 
-            <p class="event-cta">
-                <a class="event-attend pure-button" href="{{event.url}}">Attend</a>
-            </p>
+            {{> attend-button}}
         </div>
     </div>
 
@@ -60,8 +58,45 @@
             The goal of this conference is to stimulate thinking and discussion about the relationship between economic activity and environmental impacts. A particular focus will be on investment: Can socially motivated investments lead to changes in the overall quality and direction of economic activity? How can investments help reduce resource extraction and consumption, promoting a sustainable future?
         </p>
 
-        {{!-- <h2>Speakers</h2>
-        <h2>Sponsors</h2> --}}
+        <h2>Speakers</h2>
+
+        <ul class="speakers pure-g">
+          {{#speaker
+                name  = "Brian Czech"
+                org   = "CASSE"
+                photo = "/img/speakers/brian.jpg"}}
+
+            {{> speaker}}
+          {{/speaker}}
+
+          {{#speaker
+                name  = "John Gowdy"
+                org   = "Rensselaer Polytechnic Institute"
+                photo = "/img/speakers/john.jpg"}}
+
+            {{> speaker}}
+          {{/speaker}}
+
+          {{#speaker
+                name  = "Sonia Kowal"
+                org   = "Zevin Asset Management"
+                photo = "/img/speakers/sonia.jpg"}}
+
+            {{> speaker}}
+          {{/speaker}}
+
+          {{#speaker
+                name  = "Marjorie Kelly"
+                org   = "Democracy Collaborative"
+                photo = "/img/speakers/marjorie.jpg"}}
+
+            {{> speaker}}
+          {{/speaker}}
+        </ul>
+
+        {{!-- <h2>Sponsors</h2> --}}
+
+        {{> attend-button}}
     </div>
 
     <div class="venue">
