@@ -53,7 +53,10 @@ app.get('/', function (req, res, next) {
             venue: event.venue
         };
 
+        // Make sure response isn't cached.
+        res.locals._now = Date.now();
         res.set('Cache-Control', 'no-cache');
+
         res.render('home');
     }).catch(next);
 });

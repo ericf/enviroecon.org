@@ -9,7 +9,7 @@
   },
   "author": "Eric Ferraiuolo <eferraiuolo@gmail.com>",
   "dependencies": {
-    "express": "visionmedia/express#3.x",
+    "express": "~3.4.8",
     "express3-handlebars": "~0.5.0",
     "ypromise": "~0.2.2",
     "moment-timezone": "0.0.3",
