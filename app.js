@@ -53,6 +53,7 @@ app.get('/', function (req, res, next) {
             venue: event.venue
         };
 
+        res.set('Cache-Control', 'no-cache');
         res.render('home');
     }).catch(next);
 });
