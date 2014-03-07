@@ -65,8 +65,8 @@ a:visited {
     max-width: 46rem;
     margin-left: auto;
     margin-right: auto;
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
+    padding-left: 0.625rem;
+    padding-right: 0.625rem;
 }
 
 .brand {
@@ -129,7 +129,7 @@ a:visited {
     margin: 3rem 0;
     text-align: center;
 }
-.evnet .event-cta {
+.event .event-cta {
     margin: 2rem 0;
 }
 .event-attend {
@@ -180,15 +180,56 @@ a:visited {
 
 .topics p,
 .topics li {
-    font-size: 1.125em;
+    font-size: 1.125rem;
 }
 .topics li {
     margin: 0.5rem 0;
 }
 
+.venue {
+    margin-top: 2rem;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    border-top: 4px solid #c3d392;
+    border-bottom: 4px solid #c3d392;
+}
+.venue-info {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    padding-left: 0.625rem;
+    padding-right: 0.625rem;
+    color: #fff;
+    background: #5b8c17;
+    box-shadow: 0 0 2px #18290a;
+}
+.venue-title {
+    font-size: 1.125rem;
+    margin: 0.5rem 0;
+    color: #c3d392;
+}
+.venue-name {
+    color: #fff;
+    white-space: nowrap;
+}
+.venue-address {
+    font-size: 1.125rem;
+}
+.venue-address a:link,
+.venue-address a:visited {
+    color: #c3d392;
+}
+#map {
+    height: 100%;
+}
+
 .sponsors {
     padding-left: 0;
-    margin-bottom: 2rem;
+    padding-bottom: 2rem;
 }
 .sponsor {
     width: 100%;
@@ -215,47 +256,6 @@ a:visited {
 }
 #new_economy .sponsor-logo {
     vertical-align: middle;
-}
-
-.venue {
-    margin-top: 2rem;
-    width: 100%;
-    height: 100%;
-    position: relative;
-    overflow: hidden;
-    border-top: 4px solid #c3d392;
-    border-bottom: 4px solid #c3d392;
-}
-.venue-info {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 10;
-    padding-left: 0.5em;
-    padding-right: 0.5em;
-    color: #fff;
-    background: #5b8c17;
-    box-shadow: 0 0 2px #18290a;
-}
-.venue-title {
-    font-size: 1.125rem;
-    margin: 0.5rem 0;
-    color: #c3d392;
-}
-.venue-name {
-    color: #fff;
-    white-space: nowrap;
-}
-.venue-address {
-    font-size: 1.125em;
-}
-.venue-address a:link,
-.venue-address a:visited {
-    color: #c3d392;
-}
-#map {
-    height: 100%;
 }
 
 @media screen and (min-width: 30em) {
@@ -296,10 +296,9 @@ a:visited {
 }
 
 @media screen and (min-width: 37.5em) {
-    body {
+    .brand {
         margin-top: 1rem;
     }
-
     .brand-mark {
         display: block;
         width: 140px;
@@ -319,10 +318,9 @@ a:visited {
 }
 
 @media screen and (min-width: 48em) {
-    body {
+    .brand {
         margin-top: 2rem;
     }
-
     .brand-name {
         font-size: 1.5rem;
     }
