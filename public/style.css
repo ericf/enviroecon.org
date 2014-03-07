@@ -236,6 +236,9 @@ a:visited {
     color: #fff;
     white-space: nowrap;
 }
+.venue-address {
+    font-size: 1.125em;
+}
 .venue-address a:link,
 .venue-address a:visited {
     color: #c3d392;
