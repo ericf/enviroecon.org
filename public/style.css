@@ -151,12 +151,26 @@ a:visited {
 }
 .speaker {
     list-style: none;
+    margin: 2rem 0;
+}
+.speaker-photo {
+    width: 160px;
+    display: block;
+    margin: 0 auto;
+}
+.speaker-info {
+    width: 100%;
 }
 .speaker-name {
     font-size: 1.5rem;
     font-weight: 300;
     text-transform: uppercase;
-    margin-bottom: 0.5rem;
+    margin: 0.5rem auto;
+    text-align: center;
+}
+.speaker-org,
+.speaker-title {
+    font-size: 1.125rem;
 }
 
 .venue {
@@ -208,6 +222,19 @@ a:visited {
     .venue-info {
         padding-left: 1rem;
         padding-right: 1rem;
+    }
+}
+
+@media screen and (min-width: 35.5em) {
+    .speaker-photo {
+        width: 25%;
+    }
+    .speaker-info {
+        width: 75%;
+        padding-left: 2rem;
+    }
+    .speaker-name {
+        text-align: left;
     }
 }
 
@@ -269,9 +296,6 @@ a:visited {
 
     .speaker-name {
         font-size: 1.75rem;
-    }
-    .speaker-org {
-        font-size: 1.125rem;
     }
 }
 
