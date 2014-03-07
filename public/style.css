@@ -49,6 +49,9 @@ h1, h2, h3, h4 {
     font-weight: 600;
     color: #375c17;
 }
+h2 {
+    margin-top: 2em;
+}
 h3 {
     font-size: 1.125em;
 }
@@ -176,6 +179,14 @@ a:visited {
     font-size: 1.125rem;
 }
 
+.topics p,
+.topics li {
+    font-size: 1.125em;
+}
+.topics li {
+    margin: 0.5rem 0;
+}
+
 .sponsors {
     padding-left: 0;
     margin-bottom: 2rem;
@@ -230,6 +241,7 @@ a:visited {
 }
 .venue-title {
     font-size: 1.125rem;
+    margin: 0.5rem 0;
     color: #c3d392;
 }
 .venue-name {
