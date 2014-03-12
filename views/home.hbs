@@ -59,15 +59,15 @@
         <ul class="speakers">
           {{#each speakers}}
             <li class="speaker pure-g">
-                <a class="speaker-photo pure-u" href="/speakers/#{{id}}" title="More about {{firstName}}">
+                <span class="speaker-photo pure-u">
                     <img src="/img/people/{{photo}}">
-                </a>
+                </span>
 
                 <div class="speaker-info pure-u">
                     <h3 class="speaker-name">
-                        <a href="/speakers/#{{id}}" title="More about {{firstName}}">
+                        {{!-- <a href="/speakers/#{{id}}" title="More about {{firstName}}"> --}}
                             {{name}}
-                        </a>
+                        {{!-- </a> --}}
                     </h3>
 
                     <a class="speaker-org" href="{{org.url}}">{{org.name}}</a><br>
