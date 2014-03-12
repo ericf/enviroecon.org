@@ -18,7 +18,8 @@ module.exports = {
     },
 
     mapbox: {
-        version: 'v1.6.1'
+        version: 'v1.6.1',
+        map    : 'ericf.hbcooh59'
     },
 
     pure   : '0.4.2',

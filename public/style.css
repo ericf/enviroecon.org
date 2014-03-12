@@ -59,6 +59,7 @@ h3 {
 a:link,
 a:visited {
     color: #5b8c17;
+    /*text-decoration: none;*/
 }
 
 .l-wrap {
@@ -134,8 +135,8 @@ a:visited {
 }
 .event-attend {
     font-size: 1.25rem;
-    padding-left: 2.5em;
-    padding-right: 2.5em;
+    padding-left: 2.25em;
+    padding-right: 2.25em;
     background-color: #5b8c17;
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
@@ -146,7 +147,8 @@ a:visited {
     color: #fff;
 }
 .event .event-attend {
-    background-color: #375c17;
+    color: #375c17;
+    background-color: #c3d392;
 }
 .event-desc {
     font-size: 1.125rem;
@@ -158,13 +160,24 @@ a:visited {
 .speaker {
     list-style: none;
     margin: 2rem 0;
+    text-align: center;
 }
 .speaker-photo {
     width: 160px;
     margin: 0 auto;
 }
+.speaker-photo:link,
+.speaker-photo:visited {
+    text-decoration: none;
+}
+.speaker-photo img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
 .speaker-info {
     width: 100%;
+    text-align: left;
 }
 .speaker-name {
     font-size: 1.5rem;
@@ -172,6 +185,11 @@ a:visited {
     text-transform: uppercase;
     margin: 0.5rem auto;
     text-align: center;
+}
+.speaker-name a:link,
+.speaker-name a:visited {
+    color: #375c17;
+    text-decoration: none;
 }
 .speaker-org,
 .speaker-title {
@@ -184,6 +202,81 @@ a:visited {
 }
 .topics li {
     margin: 0.5rem 0;
+}
+
+.schedule {
+    padding-left: 0;
+    position: relative;
+}
+.schedule:before,
+.is-first-meeting:before,
+.is-last-meeting:before {
+    content: "";
+    position: absolute;
+    display: block;
+    left: 25%;
+    margin-left: -1px;
+    width: 2px;
+    height: 100%;
+    background: #5b8c17;
+}
+.meeting {
+    list-style: none;
+    position: relative;
+    margin: 0;
+    padding: 1rem 0;
+}
+.meeting:after {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 1.25em;
+    left: 25%;
+    margin-left: -0.5em;
+    width: 1em;
+    height: 1em;
+    border: 2px solid #5b8c17;
+    border-radius: 0.5em;
+    background: #c3d392;
+}
+.is-first-meeting {
+    padding-top: 0;
+}
+.is-first-meeting:before,
+.is-last-meeting:before{
+    width: 4px;
+    margin-left: -2px;
+}
+.is-first-meeting:before {
+    height: 0.5em;
+    background: #fff;
+}
+.is-first-meeting:after {
+    top: 0.25em;
+}
+.is-last-meeting {
+    padding-bottom: 0;
+}
+.is-last-meeting:before {
+    bottom: 0;
+    height: 0.5em;
+    background: #fff;
+}
+.is-minor-meeting:after {
+    background: #fff;
+}
+.meeting-time {
+    width: 25%;
+    text-align: right;
+    padding-right: 1rem;
+}
+.meeting-info {
+    width: 75%;
+    text-align: left;
+    padding-left: 1rem;
+}
+.meeting-title {
+    display: block;
 }
 
 .venue {
@@ -268,6 +361,27 @@ a:visited {
         font-size: 1.5rem;
     }
 
+    .schedule:before,
+    .meeting:after,
+    .is-first-meeting:before,
+    .is-last-meeting:before {
+        left: 33.3333%;
+    }
+    .meeting {
+        font-size: 1.125em;
+    }
+    .is-first-meeting:after {
+        top: 0.375em;
+    }
+    .meeting-time {
+        width: 33.3333%;
+        padding-right: 1.25rem;
+    }
+    .meeting-info {
+        width: 66.6667%;
+        padding-left: 1.25rem;
+    }
+
     .venue-info {
         padding-left: 1rem;
         padding-right: 1rem;
@@ -280,10 +394,24 @@ a:visited {
     }
     .speaker-info {
         width: 75%;
-        padding-left: 2rem;
+        padding-left: 1rem;
     }
     .speaker-name {
+        margin-top: 0;
         text-align: left;
+    }
+
+    .schedule:before,
+    .meeting:after,
+    .is-first-meeting:before,
+    .is-last-meeting:before {
+        left: 38%;
+    }
+    .meeting-time {
+        width: 38%
+    }
+    .meeting-info {
+        width: 62%;
     }
 
     .sponsor {

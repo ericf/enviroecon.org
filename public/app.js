@@ -1,5 +1,5 @@
 (function (window) {
-    var map = L.mapbox.map('map', 'ericf.hbcooh59', {
+    var map = L.mapbox.map('map', app.mapbox.map, {
         tileLayer: {
             detectRetina: true
         }

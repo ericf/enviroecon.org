@@ -1,21 +1,13 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {{> meta}}
 
     <title>{{title}}</title>
     <meta name="description" content="{{title}}: {{brand}}">
-    <meta name="generated" content="{{_now}}">
 
-    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/{{pure}}/pure-min.css">
-    <link rel="stylesheet" href="/style.css">
-    <link rel="stylesheet" href="//api.tiles.mapbox.com/mapbox.js/{{mapbox}}/mapbox.css">
-
-    <script src="http://use.typekit.net/{{typekit}}.js"></script>
-    <script>
-        try { Typekit.load(); } catch (e) {}
-    </script>
+    {{> styles}}
+    {{> typekit}}
 </head>
 <body>
 
@@ -65,41 +57,26 @@
         <h2>Speakers</h2>
 
         <ul class="speakers">
-          {{#speaker
-                name   = "Brian Czech"
-                title  = "Founding President"
-                org    = "Center for the Advancement of the Steady State Economy (CASSE)"
-                orgUrl = "http://steadystate.org/"}}
+          {{#each speakers}}
+            <li class="speaker pure-g">
+                <a class="speaker-photo pure-u" href="/speakers/#{{id}}" title="More about {{firstName}}">
+                    <img src="/img/people/{{photo}}">
+                </a>
 
-            {{> speaker}}
-          {{/speaker}}
+                <div class="speaker-info pure-u">
+                    <h3 class="speaker-name">
+                        <a href="/speakers/#{{id}}" title="More about {{firstName}}">
+                            {{name}}
+                        </a>
+                    </h3>
 
-          {{#speaker
-                name   = "John Gowdy"
-                title  = "Rittenhouse Teaching Professor of Humanities and Social Sciences, Department of Economics"
-                org    = "Rensselaer Polytechnic Institute"
-                orgUrl = "http://www.economics.rpi.edu/"}}
-
-            {{> speaker}}
-          {{/speaker}}
-
-          {{#speaker
-                name   = "Sonia Kowal"
-                title  = "Director of Socially Responsible Investing"
-                org    = "Zevin Asset Management"
-                orgUrl = "http://www.zevin.com/"}}
-
-            {{> speaker}}
-          {{/speaker}}
-
-          {{#speaker
-                name   = "Marjorie Kelly"
-                title  = "Senior Fellow and Director of Consultancy Services"
-                org    = "Democracy Collaborative"
-                orgUrl = "http://democracycollaborative.org/"}}
-
-            {{> speaker}}
-          {{/speaker}}
+                    <a class="speaker-org" href="{{org.url}}">{{org.name}}</a><br>
+                    <span class="speaker-title">
+                        {{title}}
+                    </span>
+                </div>
+            </li>
+          {{/each}}
         </ul>
 
         <h2>Topics to be Discussed</h2>
@@ -120,6 +97,33 @@
                 Each of our guest speakers has well-developed perspectives on several of these themes, and we look forward to lively and interactive discussions.
             </p>
         </div>
+
+        <h2>Schedule</h2>
+
+        <ol class="schedule">
+          {{#each schedule}}
+            <li class="meeting pure-g
+                       {{~#if minor}} is-minor-meeting {{~/if~}}
+                       {{~#if @first}} is-first-meeting {{~/if~}}
+                       {{~#if @last}} is-last-meeting {{~/if~}}">
+                <span class="meeting-time pure-u">
+                    {{time}}
+                </span>
+
+                <span class="meeting-info pure-u">
+                  {{#if minor}}
+                    <span class="meeting-title">{{title}}</span>
+                  {{else}}
+                    <b class="meeting-title">{{title}}</b>
+                  {{/if}}
+
+                  {{#if speaker}}
+                    <span class="meeting-speaker">{{speaker}}</span>
+                  {{/if}}
+                </span>
+            </li>
+          {{/each}}
+        </ol>
 
         {{> attend-button}}
     </div>
@@ -164,6 +168,10 @@
         </ul>
     </div>
 
+    <script>
+        {{{state}}}
+    </script>
+    <link rel="stylesheet" href="//api.tiles.mapbox.com/mapbox.js/{{mapbox}}/mapbox.css">
     <script src="//api.tiles.mapbox.com/mapbox.js/{{mapbox}}/mapbox.js"></script>
     <script src="/app.js"></script>
 
