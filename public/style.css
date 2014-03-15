@@ -182,6 +182,33 @@ a:visited {
     background-color: #c3d392;
 }
 
+.menu {
+    margin-bottom: 0;
+    padding-left: 0;
+    list-style: none;
+    text-align: center;
+    justify-content: center;
+    -webkit-justify-content: center;
+}
+.menu-item {
+    margin: 0 0.5rem;
+    font-size: 1.125rem;
+}
+.menu-item a {
+    display: block;
+    padding: 0.25rem 0.5rem;
+}
+.menu-item a:link,
+.menu-item a:visited {
+    color: #fff;
+}
+.menu-item b {
+    font-weight: 300;
+    border-bottom: 1px solid #c3d392;
+    padding-bottom: 1px;
+    line-height: 1.6;
+}
+
 .back-button {
     font-size: 1.25rem;
     padding-left: 1rem;
@@ -531,6 +558,13 @@ a:visited {
         font-size: 1.5rem;
     }
     .event-desc {
+        font-size: 1.25rem;
+    }
+
+    .menu {
+        margin-bottom: 1rem;
+    }
+    .menu-item {
         font-size: 1.25rem;
     }
 

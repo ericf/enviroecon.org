@@ -45,6 +45,18 @@
             </h2>
 
             {{> attend-button}}
+
+            <ul class="menu pure-g">
+                <li class="menu-item pure-u">
+                    <a href="#speakers"><b>Speakers</b></a>
+                </li>
+                <li class="menu-item pure-u">
+                    <a href="#schedule"><b>Schedule</b></a>
+                </li>
+                <li class="menu-item pure-u">
+                    <a href="#venue"><b>Venue</b></a>
+                </li>
+            </ul>
         </div>
     </div>
 
@@ -58,7 +70,7 @@
             A particular focus will be on investment: Can socially motivated investments lead to changes in the overall quality and direction of economic activity? How can investments help reduce resource extraction and consumption, promoting a sustainable future?
         </p>
 
-        <h2>Guest Speakers</h2>
+        <h2 id="speakers">Guest Speakers</h2>
 
         <p class="content">
             The guest speakers are thought leaders from government, academia, and the non-profit and for-profit sectors.
@@ -105,7 +117,7 @@
             <li>How to define, reach, and maintain a practical and sustainable economic scale</li>
         </ul>
 
-        <h2>Schedule</h2>
+        <h2 id="schedule">Schedule</h2>
 
         <ol class="schedule">
           {{#each schedule}}
@@ -135,7 +147,7 @@
         {{> attend-button}}
     </div>
 
-    <div class="venue">
+    <div id="venue" class="venue">
         <div class="venue-info">
           {{#with event.venue}}
             <h2 class="venue-title">
