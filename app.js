@@ -94,6 +94,7 @@ app.locals({
     title: 'Investing in a Sustainable Future',
     brand: 'Economic Growth & Environmental Constraints',
 
+    ga     : config.isProduction && config.ga,
     mapbox : config.mapbox.version,
     pure   : config.pure,
     typekit: config.typekit

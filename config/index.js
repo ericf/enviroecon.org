@@ -23,5 +23,6 @@ module.exports = {
     },
 
     pure   : '0.4.2',
+    ga     : env.GOOGLE_ANALYTICS,
     typekit: env.TYPEKIT
 };
