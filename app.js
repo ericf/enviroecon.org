@@ -53,7 +53,15 @@ if (config.isDevelopment) {
 
 // -- Routes -------------------------------------------------------------------
 
-app.get('/', function (req, res, next) {
+function bustCache(req, res, next) {
+    // Make sure response isn't cached.
+    res.locals._now = Date.now();
+    res.set('Cache-Control', 'no-cache');
+
+    next();
+}
+
+function getEvent(req, res, next) {
     eventbrite.getEvent().then(function (event) {
         res.locals.event = {
             name : event.name.text,
@@ -63,13 +71,18 @@ app.get('/', function (req, res, next) {
             venue: event.venue
         };
 
-        // Make sure response isn't cached.
-        res.locals._now = Date.now();
-        res.set('Cache-Control', 'no-cache');
-
-        res.render('home');
+        setImmediate(next);
     }).catch(next);
-});
+}
+
+function render(view) {
+    return function (req, res) {
+        res.render(view);
+    };
+}
+
+app.get('/',          bustCache, getEvent, render('home'));
+app.get('/speakers/', bustCache, getEvent, render('speakers'));
 
 // -- Expose -------------------------------------------------------------------
 

@@ -50,32 +50,41 @@
     <div class="l-wrap">
         <h2>About the Conference</h2>
 
-        <p class="event-desc">
+        <p class="content">
             {{> about}}
         </p>
-        <p class="event-desc">
+        <p class="content">
             A particular focus will be on investment: Can socially motivated investments lead to changes in the overall quality and direction of economic activity? How can investments help reduce resource extraction and consumption, promoting a sustainable future?
         </p>
 
-        <h2>Speakers</h2>
+        <h2>Guest Speakers</h2>
+
+        <p class="content">
+            The guest speakers are thought leaders from government, academia, and the non-profit and for-profit sectors.
+            <a href="/speakers/">More about the speakers&hellip;</a>
+        </p>
 
         <ul class="speakers">
           {{#each speakers}}
             <li class="speaker pure-g">
-                <span class="speaker-photo pure-u">
+                <a class="speaker-photo pure-u" href="/speakers/#{{id}}"
+                   title="More about {{firstName}}">
                     <img src="/img/people/{{photo}}">
-                </span>
+                </a>
 
                 <div class="speaker-info pure-u">
                     <h3 class="speaker-name">
-                        {{!-- <a href="/speakers/#{{id}}" title="More about {{firstName}}"> --}}
+                        <a href="/speakers/#{{id}}" title="More about {{firstName}}">
                             {{name}}
-                        {{!-- </a> --}}
+                        </a>
                     </h3>
 
                     <a class="speaker-org" href="{{org.url}}">{{org.name}}</a><br>
                     <span class="speaker-title">
-                        {{title}}
+                        {{title}},
+                        <a href="/speakers/#{{id}}" title="More about {{firstName}}">
+                            more&hellip;
+                        </a>
                     </span>
                 </div>
             </li>
@@ -84,22 +93,16 @@
 
         <h2>Topics to be Discussed</h2>
 
-        <div class="topics">
-            <ul>
-                <li>Social, economic, and environmental justice</li>
-                <li>Pathways toward sustainable agriculture and clean energy</li>
-                <li>Links between investments, growth, and environmental sustainability</li>
-                <li>Effects of ownership structures on growth and the environment</li>
-                <li>Developing a sharing economy</li>
-                <li>The power of socially responsible investing</li>
-                <li>Corporate social responsibility and sustainability initiatives</li>
-                <li>How to define, reach, and maintain a practical and sustainable economic scale</li>
-            </ul>
-
-            <p>
-                Each of our guest speakers has well-developed perspectives on several of these themes, and we look forward to lively and interactive discussions.
-            </p>
-        </div>
+        <ul class="topics content">
+            <li>Social, economic, and environmental justice</li>
+            <li>Pathways toward sustainable agriculture and clean energy</li>
+            <li>Links between investments, growth, and environmental sustainability</li>
+            <li>Effects of ownership structures on growth and the environment</li>
+            <li>Developing a sharing economy</li>
+            <li>The power of socially responsible investing</li>
+            <li>Corporate social responsibility and sustainability initiatives</li>
+            <li>How to define, reach, and maintain a practical and sustainable economic scale</li>
+        </ul>
 
         <h2>Schedule</h2>
 
@@ -153,8 +156,8 @@
         <div id="map"></div>
     </div>
 
-    <div class="l-wrap">
-        <h2>Event Sponsors</h2>
+    <div class="l-last l-wrap">
+        <h2>Sponsors</h2>
 
         <ul class="sponsors pure-g">
             <li class="sponsor pure-u">

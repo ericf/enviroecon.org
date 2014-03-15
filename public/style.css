@@ -34,6 +34,18 @@ html, button, input, select, textarea,
     box-shadow: none;
 }
 
+.pure-button-primary,
+a.pure-button-primary {
+    background-color: #5b8c17;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+.pure-button-primary:link,
+.pure-button-primary:visited {
+    color: #fff;
+}
+
 html,
 body {
     height: 100%;
@@ -59,7 +71,7 @@ h3 {
 a:link,
 a:visited {
     color: #5b8c17;
-    /*text-decoration: none;*/
+    text-decoration: none;
 }
 
 .l-wrap {
@@ -68,6 +80,19 @@ a:visited {
     margin-right: auto;
     padding-left: 0.625rem;
     padding-right: 0.625rem;
+}
+.l-cta {
+    margin: 3rem 0;
+    text-align: center;
+}
+.l-last {
+    padding-bottom: 1rem;
+}
+
+.icon {
+    width: 1em;
+    height: 1em;
+    vertical-align: -0.125em;
 }
 
 .brand {
@@ -86,10 +111,28 @@ a:visited {
 .brand-name-sep {
     font-weight: 600;
 }
-.brand-mark {
+
+.brand .brand-mark {
     display: block;
     width: 120px;
     margin: 1.5rem auto;
+}
+
+.brand-compact {
+    display: block;
+    margin-top: 0.5rem;
+    padding-left: 3.5rem;
+    text-align: center;
+}
+.brand-compact .brand-mark {
+    width: 3.5rem;
+    margin-left: -3.5rem;
+    padding-right: 0.5rem;
+}
+.brand-compact .brand-name {
+    margin-top: 0.375rem;
+    /* Ugh Safari! */
+    width: 99.99%;
 }
 
 .event {
@@ -126,32 +169,27 @@ a:visited {
     margin-top: 0.25rem;
     color: #c3d392;
 }
-.event-cta {
-    margin: 3rem 0;
-    text-align: center;
-}
-.event .event-cta {
-    margin: 2rem 0;
-}
 .event-attend {
     font-size: 1.25rem;
     padding-left: 2.25em;
     padding-right: 2.25em;
-    background-color: #5b8c17;
-    -webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
-    border-radius: 4px;
 }
-.event-attend:link,
-.event-attend:visited {
-    color: #fff;
+.event .l-cta {
+    margin: 2rem 0;
 }
 .event .event-attend {
     color: #375c17;
     background-color: #c3d392;
 }
-.event-desc {
-    font-size: 1.125rem;
+
+.back-button {
+    font-size: 1.25rem;
+    padding-left: 1rem;
+    padding-right: 1.5rem;
+}
+.back-button .icon {
+    fill: #c3d392;
+    margin-right: 1rem
 }
 
 .speakers {
@@ -159,7 +197,8 @@ a:visited {
 }
 .speaker {
     list-style: none;
-    margin: 2rem 0;
+    margin: 0 0 1rem;
+    padding: 1rem 0 0;
     text-align: center;
 }
 .speaker-photo {
@@ -196,10 +235,6 @@ a:visited {
     font-size: 1.125rem;
 }
 
-.topics p,
-.topics li {
-    font-size: 1.125rem;
-}
 .topics li {
     margin: 0.5rem 0;
 }
@@ -278,6 +313,9 @@ a:visited {
 .meeting-title {
     display: block;
 }
+.meeting-speaker {
+    text-transform: uppercase;
+}
 
 .venue {
     margin-top: 2rem;
@@ -322,7 +360,6 @@ a:visited {
 
 .sponsors {
     padding-left: 0;
-    padding-bottom: 1rem;
 }
 .sponsor {
     width: 100%;
@@ -368,7 +405,7 @@ a:visited {
         left: 33.3333%;
     }
     .meeting {
-        font-size: 1.125em;
+        font-size: 1.125rem;
     }
     .is-first-meeting:after {
         top: 0.375em;
@@ -427,10 +464,22 @@ a:visited {
     .brand {
         margin-top: 1rem;
     }
-    .brand-mark {
+    .brand .brand-mark {
         display: block;
         width: 140px;
         margin: 2rem auto;
+    }
+
+    .brand-compact {
+        margin-top: 1rem;
+        padding-left: 5rem;
+    }
+    .brand-compact .brand-mark {
+        width: 5rem;
+        margin-left: -5rem;
+    }
+    .brand-compact .brand-name {
+        margin-top: 1rem;
     }
 
     .venue-info {
@@ -446,13 +495,17 @@ a:visited {
 }
 
 @media screen and (min-width: 48em) {
+    .content {
+        font-size: 1.125rem;
+    }
+
     .brand {
         margin-top: 2rem;
     }
     .brand-name {
         font-size: 1.5rem;
     }
-    .brand-mark {
+    .brand .brand-mark {
         display: block;
         width: 160px;
         margin: 4rem auto;
@@ -471,7 +524,7 @@ a:visited {
     .event-time {
         font-size: 1.375rem;
     }
-    .event .event-cta {
+    .event .l-cta {
         margin: 2.25rem 0;
     }
     .event-attend {

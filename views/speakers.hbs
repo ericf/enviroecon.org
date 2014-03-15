@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+    {{> meta}}
+
+    <title>{{title}} &mdash; Guest Speakers</title>
+    <meta name="description" content="{{title}}: {{brand}}. {{> about}}">
+
+    {{> twitter-meta}}
+    {{> facebook-meta}}
+
+    {{> styles}}
+    {{> typekit}}
+</head>
+<body>
+
+    <div class="l-wrap">
+        <a class="brand-compact pure-g" href="/">
+            <img class="brand-mark pure-u" src="/img/logo.svg">
+
+            <b class="brand-name pure-u-1">
+                <span class="brand-name-part">Economic Growth</span>
+                <span class="brand-name-sep">&amp;</span>
+                <span class="brand-name-part">Environmental Constraints</span>
+            </b>
+        </a>
+
+        {{> back-button}}
+    </div>
+
+    <div class="l-last l-wrap">
+        <h1>Guest Speakers</h1>
+
+        <p class="content">
+            The guest speakers are thought leaders from government, academia, and the non-profit and for-profit sectors. Here's a breif bio on each of them:
+        </p>
+
+        <ul class="speakers">
+          {{#each speakers}}
+            <li id="{{id}}" class="speaker pure-g">
+                <span class="speaker-photo pure-u">
+                    <img src="/img/people/{{photo}}">
+                </span>
+
+                <div class="speaker-info pure-u">
+                    <h2 class="speaker-name">{{name}}</h2>
+                    <a class="speaker-org" href="{{org.url}}">{{org.name}}</a><br>
+                    <span class="speaker-title">{{title}}</span>
+
+                  {{#if (isSpeaker id 'brian')}}
+                    {{> bios/brian}}
+                  {{/if}}
+
+                  {{#if (isSpeaker id 'john')}}
+                    {{> bios/john}}
+                  {{/if}}
+
+                  {{#if (isSpeaker id 'sonia')}}
+                    {{> bios/sonia}}
+                  {{/if}}
+
+                  {{#if (isSpeaker id 'marjorie')}}
+                    {{> bios/marjorie}}
+                  {{/if}}
+                </div>
+            </li>
+          {{/each}}
+        </ul>
+
+        {{> back-button}}
+    </div>
+
+</body>
+</html>
