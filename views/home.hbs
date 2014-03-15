@@ -139,13 +139,13 @@
           {{#with event.venue}}
             <h2 class="venue-title">
                 <span class="venue-label">Venue:</span>
-                <span class="venue-name">{{name}}</span>
+                <a class="venue-name" href="{{addressURL address}}">{{name}}</a>
             </h2>
 
             <div class="pure-g">
                 <p class="venue-address pure-u-1-2">
                   {{#with address}}
-                    <a href="http://maps.apple.com/?q={{address_1}}+{{city}}+{{region}}">
+                    <a href="{{addressURL this}}">
                         {{address_1}}<br>
                         {{city}}, {{region}}
                     </a>
