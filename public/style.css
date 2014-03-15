@@ -334,25 +334,26 @@ a:visited {
     z-index: 10;
     padding-left: 0.625rem;
     padding-right: 0.625rem;
-    color: #fff;
+    color: #c3d392;
     background: #5b8c17;
     box-shadow: 0 0 2px #18290a;
 }
-.venue-title {
+.venue-info a:link,
+.venue-info a:visited {
+    color: #fff;
+}
+.venue-title,
+.venue-address,
+.venue-transit {
     font-size: 1.125rem;
-    margin: 0.5rem 0;
+}
+.venue-title {
     color: #c3d392;
+    margin: 0.5rem 0;
 }
 .venue-name {
     color: #fff;
     white-space: nowrap;
-}
-.venue-address {
-    font-size: 1.125rem;
-}
-.venue-address a:link,
-.venue-address a:visited {
-    color: #c3d392;
 }
 #map {
     height: 100%;

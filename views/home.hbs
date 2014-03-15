@@ -142,14 +142,23 @@
                 <span class="venue-name">{{name}}</span>
             </h2>
 
-            <p class="venue-address">
-              {{#with address}}
-                <a href="http://maps.apple.com/?q={{address_1}}+{{city}}+{{region}}">
-                    {{address_1}}<br>
-                    {{city}}, {{region}}
-                </a>
-              {{/with}}
-            </p>
+            <div class="pure-g">
+                <p class="venue-address pure-u-1-2">
+                  {{#with address}}
+                    <a href="http://maps.apple.com/?q={{address_1}}+{{city}}+{{region}}">
+                        {{address_1}}<br>
+                        {{city}}, {{region}}
+                    </a>
+                  {{/with}}
+                </p>
+
+                <p class="venue-transit pure-u-1-2">
+                    MBTA Station:<br>
+                    <a href="http://www.mbta.com/schedules_and_maps/subway/lines/stations/default.asp?stopId=12412">
+                        Kendall/MIT
+                    </a>
+                </p>
+            </div>
           {{/with}}
         </div>
 
