@@ -4,7 +4,7 @@
     {{> meta}}
 
     <title>{{title}} &mdash; Guest Speakers</title>
-    <meta name="description" content="{{title}}: {{brand}}. {{> about}}">
+    <meta name="description" content="{{title}}: {{brand}}. {{> about-speakers}}">
 
     {{> twitter-meta}}
     {{> facebook-meta}}
@@ -33,7 +33,8 @@
         <h1>Guest Speakers</h1>
 
         <p class="content">
-            The guest speakers are thought leaders from government, academia, and the non-profit and for-profit sectors. Here's a breif bio on each of them:
+            {{> about-speakers}}
+            Here's a breif bio on each of them:
         </p>
 
         <ul class="speakers">
