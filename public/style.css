@@ -415,6 +415,20 @@ a:visited {
     vertical-align: middle;
 }
 
+.share-buttons {
+    margin: 3rem 0 1rem;
+    text-align: center;
+    justify-content: center;
+    -webkit-justify-content: center;
+}
+.share-button {
+    margin: 0 0.5rem;
+    vertical-align: top;
+}
+.fb-like > span {
+    vertical-align: top !important;
+}
+
 @media screen and (min-width: 30em) {
     .l-wrap {
         padding-left: 1rem;
