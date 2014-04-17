@@ -39,7 +39,8 @@
   minor: true
 -
   time : 3:30pm
-  title: Panel discussion
+  title: 'Panel Discussion, Moderated By:'
+  speaker: james
 -
   time : 4:45pm
   title: Closing remarks
