@@ -22,7 +22,7 @@ module.exports = {
         map    : 'ericf.hbcooh59'
     },
 
-    pure   : '0.4.2',
+    pure   : '0.5.0-rc-1',
     ga     : env.GOOGLE_ANALYTICS,
     typekit: env.TYPEKIT
 };
