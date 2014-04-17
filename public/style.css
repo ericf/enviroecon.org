@@ -376,10 +376,15 @@ a:visited {
 }
 .venue-title {
     color: #c3d392;
-    margin: 0.5rem 0;
+    margin: 0.5rem 0 0;
 }
 .venue-name {
     white-space: nowrap;
+}
+.venue-parking {
+    display: block;
+    font-size: 1rem;
+    margin-top: 0.25rem;
 }
 #map {
     height: 100%;
