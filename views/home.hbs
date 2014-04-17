@@ -137,7 +137,9 @@
                   {{/if}}
 
                   {{#if speaker}}
-                    <span class="meeting-speaker">{{speaker}}</span>
+                    <a class="meeting-speaker" href="/speakers/#{{speaker.id}}">
+                        {{speaker.name}}
+                    </a>
                   {{/if}}
                 </span>
             </li>

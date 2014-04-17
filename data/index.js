@@ -3,24 +3,28 @@
 var path = require('path'),
     YAML = require('yamljs');
 
-exports.schedule = loadSchedule();
-exports.speakers = loadSpeakers();
+exports.speakers = require('./speakers.yml').map(function (speaker) {
+    var firstName = speaker.name.split(' ')[0],
+        id        = firstName.toLowerCase();
 
-// -----------------------------------------------------------------------------
+    speaker.id        = id;
+    speaker.firstName = firstName;
+    speaker.photo     = id + '.jpg';
 
-function loadSpeakers() {
-    return require('./speakers.yml').map(function (speaker) {
-        var firstName = speaker.name.split(' ')[0],
-            id        = firstName.toLowerCase();
+    return speaker;
+});
 
-        speaker.id        = id;
-        speaker.firstName = firstName;
-        speaker.photo     = id + '.jpg';
+exports.schedule = require('./schedule.yml').map(function (meeting) {
+    var speaker;
 
-        return speaker;
+    exports.speakers.some(function (s) {
+        if (s.id === meeting.speaker) {
+            speaker = s;
+            return true;
+        }
     });
-}
 
-function loadSchedule() {
-    return require('./schedule.yml');
-}
+    meeting.speaker = speaker;
+
+    return meeting;
+});
