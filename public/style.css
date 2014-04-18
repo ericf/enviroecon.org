@@ -265,6 +265,9 @@ a:visited {
 .topics li {
     margin: 0.5rem 0;
 }
+.topics-speaker {
+    text-transform: uppercase;
+}
 
 .schedule {
     padding-left: 0;
