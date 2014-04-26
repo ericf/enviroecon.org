@@ -267,6 +267,7 @@ a:visited {
 }
 .topics-speaker {
     text-transform: uppercase;
+    white-space: nowrap;
 }
 
 .schedule {

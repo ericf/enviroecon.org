@@ -117,10 +117,25 @@
             <li>How to define, reach, and maintain a practical and sustainable economic scale</li>
         </ul>
 
-        <h3>Breakout Sessions</h3>
+        <h2 id="breakout">Breakout Sessions</h2>
 
         <ul class="topics content">
+          {{#each breakouts}}
             <li>
+                <b>{{title}}</b>
+              {{#if people}}
+                (
+                  {{~#each people~}}
+                    <a href="{{url}}" class="topics-speaker">{{name}}</a>{{#unless @last}}, {{/unless}}
+                  {{~/each~}}
+                )
+              {{else}}
+                (<a href="{{url}}" class="topics-speaker">{{name}}</a>)
+              {{/if}}
+            </li>
+          {{/each}}
+
+            {{!-- <li>
                 <b class="topics-speaker">Greg Gerritt</b>:
                 Climate, Business Climate and developing prosperous communities in New England
             </li>
@@ -143,7 +158,7 @@
             <li>
                 <b class="topics-speaker">Caroline Howe</b>:
                 Enough-ness
-            </li>
+            </li> --}}
         </ul>
 
         <h2 id="schedule">Schedule</h2>
@@ -160,9 +175,21 @@
 
                 <span class="meeting-info pure-u">
                   {{#if minor}}
-                    <span class="meeting-title">{{title}}</span>
+                    <span class="meeting-title">
+                      {{#if url}}
+                        <a href="url">{{title}}</a>
+                      {{else}}
+                        {{title}}
+                      {{/if}}
+                    </span>
                   {{else}}
-                    <b class="meeting-title">{{title}}</b>
+                    <b class="meeting-title">
+                      {{#if url}}
+                        <a href="{{url}}">{{title}}</a>
+                      {{else}}
+                        {{title}}
+                      {{/if}}
+                    </b>
                   {{/if}}
 
                   {{#if speaker}}
