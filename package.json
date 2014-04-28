@@ -1,8 +1,8 @@
 {
-  "name": "enviroecon",
+  "name": "enviroecon.org",
   "version": "0.0.0",
   "private": true,
-  "description": "enviroecon.com ==============",
+  "description": "Website for the Investing in a Sustainable Future Conference.",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -17,5 +17,15 @@
     "express-slash": "^1.0.0",
     "express-state": "^1.1.3",
     "yamljs": "^0.1.4"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/ericf/enviroecon.org.git"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ericf/enviroecon.org/issues"
+  },
+  "homepage": "http://enviroecon.org/"
 }
