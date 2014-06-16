@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+    {{> meta}}
+
+    <title>{{title}} &mdash; Conference Videos</title>
+    <meta name="description" content="{{title}}: {{brand}}. Videos of talks and panel discussion from conference">
+
+    {{> twitter-meta}}
+    {{> facebook-meta}}
+
+    {{> styles}}
+    {{> typekit}}
+    {{> google-analytics}}
+</head>
+<body>
+
+    <div class="l-wrap">
+        {{> brand-compact}}
+        {{> back-button}}
+    </div>
+
+    <div class="l-last l-wrap">
+        <h1>Conference Videos</h1>
+
+        <p class="content">
+            The conference was a success! We wanted to share all the amazing talks with everyone who couldn't be there. Below are videos from the main talks and the panel discussion:
+        </p>
+
+        <ul class="videos">
+          {{#each schedule}}
+          {{#if video}}
+            <li class="video">
+                <h2 class="video-title">{{title}}</h2>
+                <h3 class="video-speaker">
+                    <a href="/speakers/#{{speaker.id}}">
+                        {{speaker.name}}
+                    </a>
+                </h3>
+
+                <div class="video-player">
+                    <iframe src="//www.youtube.com/embed/{{video}}"
+                        width="100%" height="100%"
+                        frameborder="0" allowfullscreen></iframe>
+                </div>
+            </li>
+          {{/if}}
+          {{/each}}
+        </ul>
+
+        {{> back-button}}
+    </div>
+
+</body>
+</html>

@@ -59,6 +59,7 @@ body {
 
 h1, h2, h3, h4 {
     font-weight: 600;
+    line-height: 1.25;
     color: #375c17;
 }
 h2 {
@@ -348,6 +349,34 @@ a:visited {
     text-transform: uppercase;
 }
 
+.videos {
+    padding-left: 0;
+}
+.video {
+    list-style: none;
+    margin: 0 0 3rem;
+}
+.video-title {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+.video-speaker {
+    margin-top: 0;
+    font-size: 1.125rem;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+.video-player {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+}
+.video-player iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
 .venue {
     margin-top: 2rem;
     width: 100%;
@@ -593,6 +622,13 @@ a:visited {
 
     .speaker-name {
         font-size: 1.75rem;
+    }
+
+    .video-title {
+        font-size: 1.5rem;
+    }
+    .video-speaker {
+        font-size: 1.375rem;
     }
 }
 

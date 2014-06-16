@@ -83,6 +83,7 @@ function render(view) {
 
 app.get('/',          bustCache, getEvent, render('home'));
 app.get('/speakers/', bustCache, getEvent, render('speakers'));
+app.get('/videos/',   bustCache, getEvent, render('videos'));
 
 // -- Expose -------------------------------------------------------------------
 
