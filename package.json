@@ -1,6 +1,6 @@
 {
   "name": "enviroecon.org",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "private": true,
   "description": "Website for the Investing in a Sustainable Future Conference.",
   "main": "server.js",
