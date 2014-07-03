@@ -33,6 +33,39 @@ app.set('state namespace', 'app');
 
 // -- Middleware ---------------------------------------------------------------
 
+function bustCache(req, res, next) {
+    // Make sure response isn't cached.
+    res.locals._now = Date.now();
+    res.set('Cache-Control', 'no-cache');
+
+    next();
+}
+
+function getEvent(req, res, next) {
+    eventbrite.getEvent()
+        .catch(function (err) {
+            if (config.isDevelopment) {
+                console.warn(err);
+                console.warn('[Warn: Using mock event data.]');
+                return require('./config/mock-event');
+            }
+
+            throw err;
+        })
+        .then(function (event) {
+            res.locals.event = {
+                name : event.name.text,
+                url  : event.url,
+                start: moment.tz(event.start.local, event.start.timezone),
+                end  : moment.tz(event.end.local, event.end.timezone),
+                venue: event.venue
+            };
+
+            setImmediate(next);
+        })
+        .catch(next);
+}
+
 if (config.isDevelopment) {
     app.use(express.logger('tiny'));
 }
@@ -52,28 +85,6 @@ if (config.isDevelopment) {
 }
 
 // -- Routes -------------------------------------------------------------------
-
-function bustCache(req, res, next) {
-    // Make sure response isn't cached.
-    res.locals._now = Date.now();
-    res.set('Cache-Control', 'no-cache');
-
-    next();
-}
-
-function getEvent(req, res, next) {
-    eventbrite.getEvent().then(function (event) {
-        res.locals.event = {
-            name : event.name.text,
-            url  : event.url,
-            start: moment.tz(event.start.local, event.start.timezone),
-            end  : moment.tz(event.end.local, event.end.timezone),
-            venue: event.venue
-        };
-
-        setImmediate(next);
-    }).catch(next);
-}
 
 function render(view) {
     return function (req, res) {

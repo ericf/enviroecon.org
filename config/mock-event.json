@@ -1,0 +1,237 @@
+{
+    "resource_uri": "https://www.eventbriteapi.com/v3/events/6156778089/",
+    "name": {
+        "text": "Investing in a Sustainable Future: Economic Growth and Environmental Constraints",
+        "html": "Investing in a Sustainable Future: Economic Growth and Environmental Constraints"
+    },
+    "description": {
+        "text": "The goal of this conference is to stimulate thinking and discussion about the relationship between economic activity and environmental impacts. A particular focus will be on investment: Can socially motivated investments lead to changes in the overall quality and direction of economic activity? How can investments help reduce resource extraction and consumption, promoting a sustainable future? \nWe will address the overarching question of how to move from our current economic model, and its associated environmental impacts, toward a more appropriately scaled and sustainable economy.  The guest speakers are thought leaders from government, academia, and the non-profit and for-profit sectors. \n  \nTopics to be discussed: \n\nSocial, economic, and environmental justice \nPathways toward sustainable agriculture and clean energy\nLinks between investments, growth, and environmental sustainability\nEffects of ownership structures on growth and the environment\nDeveloping a sharing economy\nThe power of socially responsible investing\nCorporate social responsibility and sustainability initiatives\nHow to define, reach, and maintain a practical and sustainable economic scale\n\n  \nMore details on the conference can be found at: http://enviroecon.org",
+        "html": "<P>The goal of this conference is to stimulate thinking and discussion about the relationship between economic activity and environmental impacts. A particular focus will be on investment: Can socially motivated investments lead to changes in the overall quality and direction of economic activity? How can investments help reduce resource extraction and consumption, promoting a sustainable future?</P>\r\n<P>We will address the overarching question of how to move from our current economic model, and its associated environmental impacts, toward a more appropriately scaled and sustainable economy.  The guest speakers are thought leaders from government, academia, and the non-profit and for-profit sectors.</P>\r\n<H4> </H4>\r\n<H4>Topics to be discussed:</H4>\r\n<UL>\r\n<LI><SPAN STYLE=\"line-height: 1.6em;\">Social, economic, and environmental justice </SPAN></LI>\r\n<LI><SPAN STYLE=\"line-height: 1.6em;\">Pathways toward sustainable agriculture and clean energy</SPAN></LI>\r\n<LI><SPAN STYLE=\"line-height: 1.6em;\">Links between investments, growth, and environmental sustainability</SPAN></LI>\r\n<LI><SPAN STYLE=\"line-height: 1.6em;\">Effects of ownership structures on growth and the environment</SPAN></LI>\r\n<LI><SPAN STYLE=\"line-height: 1.6em;\">Developing a sharing economy</SPAN></LI>\r\n<LI><SPAN STYLE=\"line-height: 1.6em;\">The power of socially responsible investing</SPAN></LI>\r\n<LI><SPAN STYLE=\"line-height: 1.6em;\">Corporate social responsibility and sustainability initiatives</SPAN></LI>\r\n<LI><SPAN STYLE=\"line-height: 1.6em;\">How to define, reach, and maintain a practical and sustainable economic scale</SPAN></LI>\r\n</UL>\r\n<P> </P>\r\n<P>More details on the conference can be found at: <A HREF=\"http://enviroecon.org\">http://enviroecon.org</A></P>"
+    },
+    "id": "6156778089",
+    "url": "http://www.eventbrite.com/e/investing-in-a-sustainable-future-economic-growth-and-environmental-constraints-tickets-6156778089",
+    "logo_url": "http://ebmedia.eventbrite.com/s3-build/images/5081097/32841908291/1/logo.png",
+    "start": {
+        "timezone": "America/New_York",
+        "local": "2014-04-26T09:00:00",
+        "utc": "2014-04-26T13:00:00Z"
+    },
+    "end": {
+        "timezone": "America/New_York",
+        "local": "2014-04-26T17:00:00",
+        "utc": "2014-04-26T21:00:00Z"
+    },
+    "created": "2013-04-05T14:51:54Z",
+    "changed": "2014-05-01T10:27:51Z",
+    "capacity": 200,
+    "status": "completed",
+    "currency": "USD",
+    "listed": true,
+    "shareable": true,
+    "invite_only": false,
+    "online_event": false,
+    "show_remaining": false,
+    "organizer_id": "6106430881",
+    "venue_id": "5645575",
+    "category_id": "199",
+    "subcategory_id": null,
+    "format_id": "1",
+    "organizer": {
+        "description": {
+            "text": "This conference is sponsored by the Center for the Advancement of the Steady State Economy.\r\nOrganizer: Eric Verploegen ericverp@gmail.com",
+            "html": "<P>This conference is sponsored by the Center for the Advancement of the Steady State Economy.</P>\r\n<P>Organizer: Eric Verploegen ericverp@gmail.com</P>"
+        },
+        "resource_uri": "https://www.eventbriteapi.com/v3/organizers/6106430881/",
+        "id": "6106430881",
+        "name": null,
+        "url": "http://enviroecon.eventbrite.com"
+    },
+    "venue": {
+        "id": "5645575",
+        "address": {
+            "city": "Cambridge",
+            "country": "US",
+            "region": "MA",
+            "address_1": "32 Vassar Street",
+            "address_2": "Room 32-123",
+            "country_name": "United States"
+        },
+        "latitude": "42.3618641",
+        "longitude": "-71.0905626",
+        "name": "Stata Center at MIT, Room 32-123"
+    },
+    "category": {
+        "resource_uri": "https://www.eventbriteapi.com/v3/categories/199/",
+        "id": "199",
+        "name": "Other",
+        "name_localized": "Other",
+        "short_name": "Other"
+    },
+    "subcategory": null,
+    "format": {
+        "resource_uri": "https://www.eventbriteapi.com/v3/formats/1/",
+        "id": "1",
+        "name": "Conference",
+        "short_name": "Conference"
+    },
+    "ticket_classes": [
+        {
+            "resource_uri": "https://www.eventbriteapi.com/v3/events/6156778089/ticket_classes/23970203/",
+            "id": "23970203",
+            "name": "Student + bring your own lunch",
+            "description": null,
+            "donation": false,
+            "free": true,
+            "minimum_quantity": 1,
+            "maximum_quantity": null,
+            "quantity_total": 150,
+            "quantity_sold": 92,
+            "sales_end": "2014-04-27T00:00:00Z",
+            "hidden": false,
+            "include_fee": false,
+            "split_fee": false,
+            "hide_description": true,
+            "auto_hide": false,
+            "event_id": "6156778089"
+        },
+        {
+            "resource_uri": "https://www.eventbriteapi.com/v3/events/6156778089/ticket_classes/23970233/",
+            "id": "23970233",
+            "name": "Student + lunch catered by Crema Cafe",
+            "description": null,
+            "cost": {
+                "currency": "USD",
+                "display": "$15.00",
+                "value": 1500
+            },
+            "fee": {
+                "currency": "USD",
+                "display": "$1.82",
+                "value": 182
+            },
+            "actual_cost": {
+                "currency": "USD",
+                "display": "$15.00",
+                "value": 1500
+            },
+            "actual_fee": {
+                "currency": "USD",
+                "display": "$1.82",
+                "value": 182
+            },
+            "donation": false,
+            "free": false,
+            "minimum_quantity": 1,
+            "maximum_quantity": null,
+            "quantity_total": 100,
+            "quantity_sold": 3,
+            "sales_start": "2014-04-20T06:00:00Z",
+            "sales_end": "2014-04-24T06:00:00Z",
+            "hidden": false,
+            "include_fee": false,
+            "split_fee": false,
+            "hide_description": true,
+            "auto_hide": false,
+            "event_id": "6156778089"
+        },
+        {
+            "resource_uri": "https://www.eventbriteapi.com/v3/events/6156778089/ticket_classes/23970265/",
+            "id": "23970265",
+            "name": "General Admission + bring your own lunch",
+            "description": null,
+            "cost": {
+                "currency": "USD",
+                "display": "$10.00",
+                "value": 1000
+            },
+            "fee": {
+                "currency": "USD",
+                "display": "$1.54",
+                "value": 154
+            },
+            "actual_cost": {
+                "currency": "USD",
+                "display": "$10.00",
+                "value": 1000
+            },
+            "actual_fee": {
+                "currency": "USD",
+                "display": "$1.54",
+                "value": 154
+            },
+            "donation": false,
+            "free": false,
+            "minimum_quantity": 1,
+            "maximum_quantity": null,
+            "quantity_total": 150,
+            "quantity_sold": 27,
+            "sales_end": "2014-04-27T00:00:00Z",
+            "hidden": false,
+            "include_fee": false,
+            "split_fee": false,
+            "hide_description": true,
+            "auto_hide": true,
+            "event_id": "6156778089"
+        },
+        {
+            "resource_uri": "https://www.eventbriteapi.com/v3/events/6156778089/ticket_classes/23970267/",
+            "id": "23970267",
+            "name": "General Admission + lunch catered by Crema Cafe",
+            "description": null,
+            "cost": {
+                "currency": "USD",
+                "display": "$25.00",
+                "value": 2500
+            },
+            "fee": {
+                "currency": "USD",
+                "display": "$2.37",
+                "value": 237
+            },
+            "actual_cost": {
+                "currency": "USD",
+                "display": "$25.00",
+                "value": 2500
+            },
+            "actual_fee": {
+                "currency": "USD",
+                "display": "$2.37",
+                "value": 237
+            },
+            "donation": false,
+            "free": false,
+            "minimum_quantity": 1,
+            "maximum_quantity": null,
+            "quantity_total": 100,
+            "quantity_sold": 10,
+            "sales_start": "2014-04-20T06:00:00Z",
+            "sales_end": "2014-04-24T06:00:00Z",
+            "hidden": false,
+            "include_fee": false,
+            "split_fee": false,
+            "hide_description": true,
+            "auto_hide": false,
+            "event_id": "6156778089"
+        },
+        {
+            "resource_uri": "https://www.eventbriteapi.com/v3/events/6156778089/ticket_classes/25225203/",
+            "id": "25225203",
+            "name": "Organizer/Speaker",
+            "description": null,
+            "donation": false,
+            "free": true,
+            "minimum_quantity": 1,
+            "maximum_quantity": null,
+            "quantity_total": 30,
+            "quantity_sold": 10,
+            "sales_start": "2014-04-01T22:00:00Z",
+            "sales_end": "2014-04-26T23:00:00Z",
+            "hidden": true,
+            "include_fee": false,
+            "split_fee": false,
+            "hide_description": true,
+            "auto_hide": false,
+            "event_id": "6156778089"
+        }
+    ]
+}
