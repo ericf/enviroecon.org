@@ -61,6 +61,10 @@ EVENTBRITE_OAUTH_TOKEN=123SOMEOAUTHTOKEN456
 NODE_ENV=development
 ```
 
+#### Edit `config/index.js` File
+
+The [`config/index.js`][config] module will need to be updated with your [Eventbrite][eventbrite] `eventId`, and [Mapbox][mapbox] `map` id.
+
 ### 4. Start the server!
 
 Now you're all ready to start up the web server and start using the site! Again, Foreman is used to make this easy:
@@ -75,3 +79,5 @@ $ foreman start
 [eventbrite]: http://www.eventbrite.com/
 [eventbrite-dev]: http://developer.eventbrite.com/
 [eventbrite-auth]: http://developer.eventbrite.com/docs/auth/
+[mapbox]: https://www.mapbox.com/
+[config]: https://github.com/ericf/enviroecon.org/blob/master/config/index.js
