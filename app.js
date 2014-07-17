@@ -53,6 +53,8 @@ function getEvent(req, res, next) {
             throw err;
         })
         .then(function (event) {
+            console.log(event);
+
             res.locals.event = {
                 name : event.name.text,
                 url  : event.url,
