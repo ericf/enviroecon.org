@@ -44,13 +44,13 @@ function bustCache(req, res, next) {
 function getEvent(req, res, next) {
     eventbrite.getEvent()
         .catch(function (err) {
-            if (config.isDevelopment) {
+            // if (config.isDevelopment) {
                 console.warn(err);
                 console.warn('[Warn: Using mock event data.]');
                 return require('./config/mock-event');
-            }
+            // }
 
-            throw err;
+            // throw err;
         })
         .then(function (event) {
             res.locals.event = {
